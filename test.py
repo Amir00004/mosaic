@@ -2,8 +2,6 @@ from flask import Flask, render_template, request
 import google.generativeai as genai
 
 app = Flask(__name__)
-genai.configure(api_key="AIzaSyCJxTttbVo39WgbwIFOMFqltIZsykuoTMM")
-
 models = [m.name for m in genai.list_models()]
 model = genai.GenerativeModel(model_name="models/gemini-2.0-flash")  # Note the full model path
 
